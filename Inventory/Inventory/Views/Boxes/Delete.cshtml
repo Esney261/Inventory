@@ -1,0 +1,18 @@
+﻿@model Inventory.Data.Entities.Box
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Borrar</h1>
+
+<h3>Esta seguro de borrar?</h3>
+<div>
+    <partial name="_BoxDetails"/>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Borrar" class="btn btn-outline-danger" /> 
+        <a asp-action="Index"class="btn btn-outline-success">Volver atras</a>
+    </form>
+</div>
